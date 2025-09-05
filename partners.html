@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BharatComfort – Partner Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="/assets/js/firebase-init.js"></script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-[Poppins]">
+
+  <!-- Navbar -->
+  <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <a href="/" class="text-xl font-bold">BharatComfort</a>
+      <button id="logoutBtn" class="px-4 py-2 bg-red-600 text-white rounded-lg">Logout</button>
+    </nav>
+  </header>
+
+  <!-- Dashboard -->
+  <main class="max-w-5xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold mb-6">Partner Dashboard</h2>
+
+    <!-- Add New Listing -->
+    <section class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg mb-10">
+      <h3 class="text-xl font-semibold mb-4">Add New Listing</h3>
+      <form id="listingForm" class="space-y-4">
+        <input type="text" id="name" placeholder="Business Name" required class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700" />
+        <input type="text" id="location" placeholder="Location" required class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700" />
+        <input type="url" id="website" placeholder="Website URL" class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700" />
+        <input type="url" id="mapLink" placeholder="Google Maps Link" class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700" />
+        <textarea id="description" placeholder="Description" rows="3" class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700"></textarea>
+        <input type="file" id="image" accept="image/*" class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700" />
+        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg">Add Listing</button>
+      </form>
+      <p id="formMessage" class="mt-4 text-center"></p>
+    </section>
+
+    <!-- My Listings -->
+    <section>
+      <h3 class="text-xl font-semibold mb-4">My Listings</h3>
+      <div id="myListings" class="grid md:grid-cols-2 gap-6">
+        <p class="col-span-full text-center">Loading...</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8 mt-12 text-center">
+    <p>&copy; 2025 BharatComfort. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script type="module" src="/assets/js/partners.js"></script>
+</body>
+</html>
