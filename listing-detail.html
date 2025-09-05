@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BharatComfort – Listing Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="/assets/js/firebase-init.js"></script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-[Poppins]">
+
+  <!-- Navbar -->
+  <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <a href="/" class="text-xl font-bold">BharatComfort</a>
+      <div>
+        <a href="/listings.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg">All Listings</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Listing Details -->
+  <main class="max-w-5xl mx-auto py-12 px-4">
+    <div id="listingContainer">
+      <p class="text-center">Loading...</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8 mt-12 text-center">
+    <p>&copy; 2025 BharatComfort. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script type="module" src="/assets/js/listing.js"></script>
+</body>
+</html>
