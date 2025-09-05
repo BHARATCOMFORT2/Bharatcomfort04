@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BharatComfort – Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="/assets/js/firebase-init.js"></script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-[Poppins]">
+
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-8 w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-6 text-center">Welcome to BharatComfort</h2>
+
+      <!-- Login Form -->
+      <div id="loginForm">
+        <input id="loginEmail" type="email" placeholder="Email"
+          class="w-full mb-3 px-4 py-2 rounded-lg border" />
+        <input id="loginPassword" type="password" placeholder="Password"
+          class="w-full mb-3 px-4 py-2 rounded-lg border" />
+        <button id="loginBtn"
+          class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Login</button>
+        <p class="text-sm mt-4 text-center">Don’t have an account?
+          <a href="#" id="showRegister" class="text-blue-600">Register</a>
+        </p>
+      </div>
+
+      <!-- Register Form -->
+      <div id="registerForm" class="hidden">
+        <input id="registerName" type="text" placeholder="Full Name"
+          class="w-full mb-3 px-4 py-2 rounded-lg border" />
+        <input id="registerEmail" type="email" placeholder="Email"
+          class="w-full mb-3 px-4 py-2 rounded-lg border" />
+        <input id="registerPassword" type="password" placeholder="Password"
+          class="w-full mb-3 px-4 py-2 rounded-lg border" />
+        <button id="registerBtn"
+          class="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Register</button>
+        <p class="text-sm mt-4 text-center">Already have an account?
+          <a href="#" id="showLogin" class="text-blue-600">Login</a>
+        </p>
+      </div>
+
+      <!-- Logout -->
+      <div id="logoutSection" class="hidden text-center">
+        <p class="mb-4">You are logged in.</p>
+        <button id="logoutBtn"
+          class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/assets/js/auth.js"></script>
+</body>
+</html>
