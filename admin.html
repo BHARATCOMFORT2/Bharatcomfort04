@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BharatComfort | Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 p-4 flex justify-between items-center text-white">
+    <h1 class="text-xl font-bold">Admin Dashboard</h1>
+    <button id="logoutBtn" class="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-600">Logout</button>
+  </nav>
+
+  <!-- Content -->
+  <div class="p-6 space-y-8">
+
+    <!-- Listings Management -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Manage Listings</h2>
+      <div id="allListings" class="grid md:grid-cols-2 gap-6">
+        <p class="col-span-full text-center">Loading listings...</p>
+      </div>
+    </section>
+
+    <!-- Partner Accounts -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Manage Partners</h2>
+      <div id="allPartners" class="grid md:grid-cols-2 gap-6">
+        <p class="col-span-full text-center">Loading partners...</p>
+      </div>
+    </section>
+
+    <!-- User Reviews -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">User Reviews</h2>
+      <div id="allReviews" class="space-y-4">
+        <p class="text-center">Loading reviews...</p>
+      </div>
+    </section>
+
+    <!-- Bookings -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Bookings</h2>
+      <div id="allBookings" class="space-y-4">
+        <p class="text-center">Loading bookings...</p>
+      </div>
+    </section>
+
+  </div>
+
+  <script type="module" src="/assets/js/admin.js"></script>
+</body>
+</html>
