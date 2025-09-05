@@ -37,11 +37,34 @@
     </section>
 
     <!-- My Listings -->
-    <section>
-      <h3 class="text-xl font-semibold mb-4">My Listings</h3>
-      <div id="myListings" class="grid md:grid-cols-2 gap-6">
-        <p class="col-span-full text-center">Loading...</p>
+<section>
+  <h3 class="text-xl font-semibold mb-4">My Listings</h3>
+  <div id="myListings" class="grid md:grid-cols-2 gap-6">
+    <p class="col-span-full text-center">Loading...</p>
+  </div>
+</section>
+
+<!-- Edit Modal -->
+<div id="editModal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl w-full max-w-lg">
+    <h3 class="text-xl font-semibold mb-4">Edit Listing</h3>
+    <form id="editListingForm" class="space-y-4">
+      <input type="hidden" id="editListingId" />
+      <input type="text" id="editName" placeholder="Business Name" required class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700" />
+      <input type="text" id="editLocation" placeholder="Location" required class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700" />
+      <input type="url" id="editWebsite" placeholder="Website URL" class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700" />
+      <input type="url" id="editMapLink" placeholder="Google Maps Link" class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700" />
+      <textarea id="editDescription" placeholder="Description" rows="3" class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700"></textarea>
+      <input type="file" id="editImage" accept="image/*" class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700" />
+      <div class="flex gap-3">
+        <button type="submit" class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg">Save</button>
+        <button type="button" id="cancelEdit" class="flex-1 bg-gray-600 hover:bg-gray-700 text-white py-2 rounded-lg">Cancel</button>
       </div>
+    </form>
+    <p id="editMessage" class="mt-3 text-center"></p>
+  </div>
+</div>
+
     </section>
   </main>
 
