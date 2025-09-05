@@ -30,6 +30,30 @@
   <footer class="bg-gray-900 text-gray-300 py-8 mt-12 text-center">
     <p>&copy; 2025 BharatComfort. All rights reserved.</p>
   </footer>
+<!-- Reviews Section -->
+<section class="mt-8">
+  <h3 class="text-xl font-semibold mb-4">User Reviews & Ratings</h3>
+  
+  <!-- Add Review Form -->
+  <div id="reviewFormContainer" class="mb-6">
+    <form id="reviewForm" class="space-y-3 bg-gray-100 dark:bg-gray-800 p-4 rounded-xl">
+      <select id="rating" required class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700">
+        <option value="">Select Rating</option>
+        <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+        <option value="4">⭐⭐⭐⭐ (4)</option>
+        <option value="3">⭐⭐⭐ (3)</option>
+        <option value="2">⭐⭐ (2)</option>
+        <option value="1">⭐ (1)</option>
+      </select>
+      <textarea id="reviewText" placeholder="Write your review..." rows="3" required class="w-full px-3 py-2 border rounded-lg dark:bg-gray-700"></textarea>
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg">Submit Review</button>
+      <p id="reviewMessage" class="text-center mt-2"></p>
+    </form>
+  </div>
+
+  <!-- Reviews List -->
+  <div id="reviewsList" class="space-y-4"></div>
+</section>
 
   <!-- Script -->
   <script type="module" src="/assets/js/listing.js"></script>
